@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Qual sua nacionalidade</h1>
+
+    qual Pais você nasceu?
+    <input type="text" name="textoPais" id="textoPais">
+
+    <input type="button" value="verificar" onclick="verificar()">
+
+    <div id="resposta"></div>
+
+    <script>
+
+        function verificar() {
+            var textoPais = window.document.querySelector('input#textoPais')
+            var resposta = window.document.getElementById('resposta')
+            var text = textoPais.value
+
+            resposta.innerHTML = ` No brasil vc é: `
+
+            if (text!= 'brasil') {
+                resposta.innerHTML += 'you is gringou'
+            } else {
+                resposta.innerHTML +='brazilian'
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

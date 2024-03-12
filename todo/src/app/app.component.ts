@@ -9,5 +9,17 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'todo';
+  public todos: any[] = [];
+  public title: String = "minhas tarefas"
+
+  constructor() {
+    this.todos.push('passear com o doguinho')
+    this.todos.push('passear com o gatinho')
+    this.todos.push('ir ao mercado')
+  }
+
+  alteraTexto(){
+    this.title= 'teste'
+  }
+  
 }
